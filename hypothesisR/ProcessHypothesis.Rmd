@@ -1,0 +1,52 @@
+---
+title: "Process hypothesis"
+author: "Matt Crump"
+date: "11/2/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(hypothesisr)
+library(knitr)
+library(data.table)
+
+db<-hs_search_all(custom = list(uri.parts = "crumplab/ResearchMethods"))
+db<-as.data.table(db)
+
+get_all_keywords<-unlist(db$tags)
+
+db$tags<-tolower(db$tags)
+
+#convert tags to lowercase
+which(grepl(pattern = "unhelpful", db$tags))
+
+comments_by_keywords<-db[tags=="Unhelpful",]$text
+
+new_info<-list()
+for(i in 1:dim(db)[1]){
+  new_info<-c(new_info,parse_target(db[i,]$target))
+}
+
+parse_target<-function(x){
+  unlist_x<-x[[1]]
+  url_source<-unlist_x$source
+  unlist_selector<-unlist_x$selector[[1]]
+  fragment<-unlist_selector[1,3]
+  exact_text<-unlist_selector[4,10]
+  startContainer<-unlist_selector[2,5]
+  endContainer<-unlist_selector[2,4]
+  return_df<-data.frame(exact_text,url_source,fragment,startContainer,endContainer)
+  return(return_df)
+}
+
+a<-parse_target(db[1,]$target)
+
+
+
+
+
+```

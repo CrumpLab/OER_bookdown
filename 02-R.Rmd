@@ -1,0 +1,46 @@
+# R, R-studio, and RMarkdown
+
+## Quick start steps
+
+1. Download and install [R](https://www.r-project.org) for your platform
+2. Download and install [R-Studio](https://www.rstudio.com) for your platform (R must be installed first)
+3. Open R-studio
+4. Open a new RMarkdown document, compile it using the knit button.
+
+## R Markdown
+
+You can open a new R Markdown (.rmd) file from Rstudio through the file menu (New File -> R markdown...), or by clicking the green plus sign icon in the top left-hand corner of R-studio, and choosing R Markdown. This will open a window allowing you to name your new document, and then will open the new R Markdown document in the R-studio text editor. The new document shows some example syntax for writing in R Markdown. You can compile the document to see what it will look like as a .pdf or website by clicking the **Knit** button.
+
+R Markdown offers a convenient way to create content in plain-text, and then display the content as a .pdf or web-page. R Markdown separates content from style. In a typical word-processor, like Microsoft Word, an author formats the style of the content as they create it, the two are bound together. In an R Markdown document the content is written in plain text without any styling. In a second step, the R Markdown document is compiled to display the content in a particular style. This tutorial uses the styles available in the [bookdown](https://bookdown.org/yihui/bookdown/) package. There are other styles available, and you can create and modify your own styles.
+
+R Markdown is commonly used to create notebooks for the results of statistical analysis in R. R Markdown allows an author to write sections of text, together with sections of R code. When the document is compiled, it is displayed as a formatted document with sections of headers and text, interspersed with sections of the R code used to run analyses, along with the output of the analyses. For example, below is a snippet of R code that computes and then displays the mean for the set of numbers 1 to 10.
+
+```{r}
+mean(seq(1,10,1))
+```
+
+Although reporting statistical analyses may be the most common use of R Markdown, the framework can also be used to build books, using the [bookdown](https://bookdown.org/yihui/bookdown/) package. 
+
+## R Markdown tips
+
+I recommend looking at examples of .rmd files to see how they work. For example, all of the chapters in this tutorial are written in R Markdown using .rmd files. So, you can view the source code for each chapter by opening the .rmd file corresponding to each chapter. You will find the syntax to be fairly basic. Chapter headings are lines preceded by a \#. Section headers, and sub, or sub-sub headers, are lines preceded by \#\#, \#\#\#, or \#\#\#\#. Paragraphs are new lines with text. You will also see how to insert hyperlinks to websites, as well as insert graphics.
+
+### Inserting Graphics
+
+In the repository for this book, you will find a Figures file. You can place .png and .pdf files in this folder. Then, to insert a graphic you create a short R code snippet, and point R toward the location of the file. See the Figure 1 example in the Overview.Rmd file.
+
+### Inserting References
+
+See the chapter on Zotero.
+
+### Links for using R Markdown
+
+1. The R-studio website has in-depth tutorials on using R Markdown, available [here](http://rmarkdown.rstudio.com/lesson-1.html).
+2. [Cheatsheet for R Markdown](http://rmarkdown.rstudio.com/lesson-15.html)
+3. In the Help menu of R-Studio, you can also find cheetsheats and formatting guides for using R Markdown.
+
+
+
+
+
+

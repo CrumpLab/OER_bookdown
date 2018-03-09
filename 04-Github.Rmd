@@ -1,0 +1,45 @@
+# Github
+
+To quote from wikipedia, "Github is a Web-based Git version control repository hosting service. It is mostly used for computer code."--- and I would add, many other things. 
+
+The purpose of this chapter is to describe how Github can be used to serve your web-book (compiled using bookdown), and to share the source code so that others can duplicate and modify your book, or so that others can contribute content to your existing book.
+
+## Getting Started 
+
+### Make an account with Github
+
+To get started with [Github](https://github.com) you need to create a free account. You should see a sign up option on the main page. 
+
+Your account now consists of your profile page (where you can add information about yourself), and an empty list of repositories. Repositories are Github file folders. They can be purely cloud-based; for example, you can create a repository then add files to it through the web-based interface. You can also create a copy of each repository on your local computer, make changes to the repository on your local computer, and then merge those changes with the online repository. 
+
+### Install Github Desktop
+
+Github has provided a free and convenient tool for using your local computer to interface with the web-based version of Github. To use the tool, download and install the [desktop app for Github](https://desktop.github.com). Once the app is installed, make sure that you [connect it to your Github account](https://help.github.com/desktop/guides/getting-started-with-github-desktop/authenticating-to-github/) so that you can access repositories that you create.
+
+# Repository workflow
+
+We will use the following workflow:
+
+1. Create a new empty repository on the Github Website
+2. Clone the repository to your local computer
+3. Add files to the repo on your local computer (work locally)
+4. Merge the files back to the Github Website (share final versions)
+
+## Creating a new repository on Github.com
+
+  1. Log in to Github.com
+  2. In the top right corner of the page, click the "+" icon
+  3. Choose new repository
+  4. Give it a short name
+  5. You have a few other options that you can revisit later
+  6. Click create repository
+  
+## Cloning a copy on your computer
+
+  1. Open the Github desktop app
+  2. 
+  
+## Make changes to the repository
+
+
+

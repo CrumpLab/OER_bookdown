@@ -1,0 +1,68 @@
+# Zotero
+
+[Zotero](https://www.zotero.org) is a free, cross-platform tool to help you collect, organize, cite, and share your research sources. Zotero is similar to Mendeley or EndNote.
+
+The purpose of this chapter is to show how Zotero can be used as a reference manager to allow you to cite works in your book, and automatically compile bibliographies or reference sections. The bookdown package uses Latex bibliography files to generate citations and create bibliographies. These .bib files are text-based files with a specific syntax for coding the relevant information in a citation. Each citation in a .bib file has an associated key that is inserted into an Rmarkdown document to generate a citation. We will use Zotero to avoid writing our own .bib from scratch. Instead, there are convenient methods for populating Zotero with a database of references, and for compiling a .bib file from a Zotero databse that can be used in bookdown.
+
+## Getting Started
+
+1. Create an account with [Zotero](https://www.zotero.org), click register in the top-right corner
+2. [Download](https://www.zotero.org/download/) the Zotero Desktop app
+3. [Download](https://www.zotero.org/download/) the Zotero Connector extension for your web-browser
+
+Zotero operates on the cloud as well as on your desktop. You can connect your online Zotero account with your desktop app in the preferences.
+
+## Populating Zotero with references
+
+There are multiple ways to import references into Zotero. In the Zotero desktop app you can create folders to organize your references. 
+
+### Drag and Drop .pdfs
+
+1. Create a new folder and name it
+2. Drag and drop .pdfs into the folder
+3. Highlight the .pdfs, then right-click, and choose "retrieve metadata for pdf".
+4. For most journal articles, Zotero will be able to automatically find the citation information for your .pdf. This will convert the .pdf into a Zotero citation that includes both the citation information, as well as the .pdf
+
+### Import citations and pdfs from the web
+
+1. Ensure that your Desktop app is open, and that you have installed the Zotero plugin for your web-browser
+2. Use google scholar to search for an article
+3. Click the Zotero button in your web-browser
+4. You should see a list of all of the articles on the google scholar page. 
+5. Click any or all the articles you want to import, then import them
+6. Zotero will download the citation information along with any associated .pdf to the current folder that is open in the Zotero desktop app.
+
+Zotero is fairly flexible, so the above process will generally work when you are accessing many different databases, and journal web-pages for specific articles.
+
+### A note of caution
+
+The citation information that Zotero downloads is sometimes inaccurate. Be sure to check the fields for each of your citations to ensure they are accurate. For example, page ranges are often missing.
+
+## Generating a .bib file
+
+1. Right-click a Zotero folder
+2. Choose "Export Collection"
+3. Choose "Bibtex"
+4. Save the file
+5. Copy the file into the folder for your bookdown project
+6. add the file to the bibliography line in the Index.Rmd file.
+
+## Citing references in an RMarkdown file
+
+Citations are add using the following format `@citationkey`, or `[@citationkey]` to place the author,year citation in parentheses. The citation key name is listed for each citation in the bib file. Here are a couple of links with some additional examples: [examples from bookdown](https://bookdown.org/yihui/bookdown/citations.html), and examples from [RMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html).
+
+The source code for this book contains two .bib files: book.bib and packages.bib. Each citation in those files has an associated citation key. Here is an example of citing the bookdown package [@xie2015]. This is an example of citing R-core team [@R-base]
+
+### Cite while you write
+
+A minor inconvenience when using .bib for citations in Rmarkdown is that you have to know the citation key, and these are easy to forget. One option is to load up your .bib file, then search through it to find the citation key.
+
+Another option is to download and install the `citr` package. Once this package is installed, you can use its cite while your write feature. Click the tools menu, addins, then, insert citations. This will open up a window showing all of the citations in your bib files. You can click multiple citations, and then insert the citation keys into your Rmarkdown document. This is convenient method for quickly finding needed citation keys. I recommend first openining the index.rmd file (which points to your .bib files), and then opening the insert citations tools; this will allow the tool to find your .bib files. After this point, you should be able to use the tool when you are working within .Rmd files for each chapter.
+
+
+
+
+
+
+
+

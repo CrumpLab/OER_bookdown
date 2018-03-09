@@ -1,0 +1,61 @@
+# Overview {#overview}
+
+## Open online educational resources (OERs)
+
+OERs are educational resources that are public and freely available to students (or anyone) through the web. There are already numerous OER databases linking to numerous free textbooks across many domains of study (e.g., [see the BC library OER site](http://libguides.brooklyn.cuny.edu/research/oer)). These texts are often disseminated under a creative commons license, which allows anyone to mix, match, edit, update, and transform those texts, and then share them again with the public at large under the same license. Finding existing OERs can be a good starting point for developing your own content.
+
+## What is this tutorial?
+
+This tutorial shows how a few open-source tools can be brought together for quicky developing and sharing content in the form of online books and webpages. The tools require some downloading of free programs (all cross-platform), but once in place, allow you to write and format text with minimal syntax, and then easily compile your source documents into multiple formats, including web-books, .pdf's, and e-pubs.
+
+```{r fig1,fig.cap="Basic steps", echo=FALSE,dev='png'}
+knitr::include_graphics('Figures/OERTutorial_Overview.pdf')
+```
+
+This tutorial also covers tools to enhance student interaction with the content, including the ability for students to select text in a web-book and then post comments about the text. Depending on the pedagogical goals of the instructor, posts could be to critically evaluate portions of the textbook, supplement sections with additional examples, and tag sections in need of revision or that were particularly helpful. All of these comments can be made publically accessible so that everyone viewing the textbook can see all of the comments as they are posted (inline, corresponding to the sections that were annotated). Furthermore, the database of annotations can easily be extracted and used for revising the text, or other purposes.
+
+## Can I see an example of what you are talking about?
+
+Yes, there are many working examples already. As the preface mentions, this tutorial is an example. So the bells and whistles you see here constitute one example of an end product. Some additional examples include a [Research Methods for Psychologist's textbook](https://crumplab.github.io/ResearchMethods/), and a [Programming for Psychology textbook](https://crumplab.github.io/programmingforpsych/) that I made using the tools in this tutorial.
+
+If you want to see examples of the inline commenting features, simply follow the directions in the preface of the above two books. Inline commenting is made possible by the [hypothes.is](https://web.hypothes.is) browser add-on tool. It is simple to install, requiring that you sign up with hypothesis, and then follow their directions to install an add-on for chrome, or a bookmarklet for other browsers. When you turn on hypothesis viewing these web-books, you will be able to see any public comments made by other people.
+
+## The toolbox (what do I need to download)
+
+Each of the chapters in this tutorial will discuss each of these tools in more depth, along with links to many helpful tool-specific resources already available online.
+
+### R
+
+[R](https://www.r-project.org) is a free and open-source programming language primarily developed for statistical analysis. R has a large community of active open-source developers who are makin R better and more powerful everyday. R comes with existing packages for statistical analysis, but can be extended to accomplish many more tasks by downloading and installing additional packages. Download and install before you download and install R-studio.
+
+### R-studio
+
+[R-Studio](https://www.rstudio.com) is a free and open-source GUI for R. For those of you familiar with the Matlab environment, R-studio looks similar.
+
+### Markdown and R Markdown
+
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a simple mark-up language for creating .html files viewable in web-browsers. HTML (hyper-text markup language) is a powerful, but visually cluttered syntax for creating content to be displayed in web-pages. Markdown allows you to easily write text while avoiding writing html syntax. For example, This document is written in markdown.
+
+[RMarkdown](http://rmarkdown.rstudio.com) is R's version of markdown. It's basically the same as markdown, but allows you to inject and run R code inside a markdown document. This is especially useful when you are writing documents that contain output from data-analysis you have conducted in R. This document is an .Rmd file (Rmarkdown). The paragraphs are plain text, and the header's (level I, II, III) are defined by \#'s.
+
+### Bookdown
+
+[Bookdown](https://bookdown.org/yihui/bookdown/) is an R package for compiling Rmarkdown documents into various formats, including web-books, .pdf's, and epubs. This incredible package, along with the knitr package, does much of the heavy lifting, allowing writer's to focus on content generation, rather than the technical details of deploying that content to the various formats. Once the .Rmd files are written, deployment can is a single-click. Bookdown also provides different formats for styling the output, and styling is customizable.
+
+### Github
+
+[Github](https://github.com) is a version control software development tool/website. Github provides a free option for hosting static web-pages (e.g., you could deploy your web-book to github), and allows you to store the source code for generating your book in an online repository. This allows others to easily copy your source code and make suggested edits that you can incorporate back into your content. This web-book is hosted using github pages, and the source code for this book is hosted in a github repository. Downloading the github repository will give you all the files you need to compile this book, and by editing the text in this book, you can change it into your own.
+
+### Hypothes.is
+
+[Hypothes.is](https://web.hypothes.is) is a web-browser add-on for annotating the web via inline commenting. This allows anyone to select a snippet of text in a web-browser and then post a comment about the selected text. Annotations can be made publicly or privately. All public annotations can be viewed by anyone else running hypothesis on the same website. Using Hypothesis with your web-book allows you to engage students in interacting with the textbook by allowing them to contribute to content generation (by posting new content), or content revision (by tagging sections in need of revision).
+
+### hypothesisr
+
+[hypothesisr](https://github.com/mdlincoln/hypothesisr) is an r package for scraping annotation data collected through the hypothesis app. This could be used for identifying tagged sections in need of revision, or for other analytic purposes.
+
+### Zotero
+
+[Zotero](https://www.zotero.org) is a free and open source citation management tool. It is cloud-based with both browser and app versions. It is easy to create .pdf libraries along with citation information, and then compile bibliographies with citation keys for quickly citing articles. The R bookdown package is compatible with latex-style bibliography files that can be exported by Zotero.
+
+

@@ -1,0 +1,38 @@
+# Bookdown
+
+[Bookdown](https://bookdown.org/yihui/bookdown/) is an R package written by Yihui Xie. Bookdown is a tool for stitching together multiple R Markdown files into a whole book. Most impressive, is that the final product can rendered in multiple formats, including .pdf, epub, and as a web-page.
+
+## R Packages and installing Bookdown
+
+R is an open-source platform. Many developers create and share packages for accomplishing different tasks in R. 
+
+Packages can be installed in R-Studio by clicking the packages tab in the lower right-hand window, and then clicking the Install button. If you know the name of the package you want to install, then type it in, and click install. 
+
+To install bookdown, type bookdown into the textbox, make sure you have "install dependencies" clicked on, and then press install.
+
+The **packages** tab also shows all of the currently installed R packages on your system. These packages needed to be loaded, or turned on, in order to use them. You can do this by clicking on the checkmark box beside each package.
+
+You may into a situation where your R Markdown file does not compile, and you get a message saying that a particular package is required. Usually this can be resolved by installing the missing package, using the same method used to install the bookdown package.
+
+## Using Bookdown
+
+Yihui Xie has written a whole [tutorial book](https://bookdown.org/yihui/bookdown/), using bookdown, to describe how to use the bookdown package. Similarly, check out Yihui Xie's [minimal working example](https://bookdown.org/yihui/bookdown/get-started.html), which contains all of the source code necessary to compile a barebones book.
+
+Similarly, this tutorial was written in bookdown, and is intended to be used as a starting point for you to create your own book.
+
+## Compiling this tutorial using bookdown.
+
+1. Download the Github Repository for this tutorial as a .zip file here.
+2. Unzip the file somewhere on your computer.
+3. Open R-Studio
+4. Navigate to the tutorial folder using the Files tab
+5. Open the R Markdown file **index.Rmd** and click the button **Build Book** on the **Build** tab of RStudio (top right-hand corner).
+
+You can build the book as a .pdf, epub, or gitbook (renders as a web-page in the gitbook style). After you build the book, it should pop-up in a viewer screen.
+
+
+
+
+
+
+
