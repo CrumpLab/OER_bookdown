@@ -25,7 +25,7 @@
 <meta name="author" content="Matthew Crump">
 
 
-<meta name="date" content="2018-03-09">
+<meta name="date" content="2018-03-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -155,6 +155,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html"><i class="fa fa-check"></i><b>5</b> Hypothes.is</a><ul>
 <li class="chapter" data-level="5.1" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#a-case-study-example"><i class="fa fa-check"></i><b>5.1</b> A case study example</a></li>
 <li class="chapter" data-level="5.2" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#hypothesisr-1"><i class="fa fa-check"></i><b>5.2</b> hypothesisr</a></li>
+<li class="chapter" data-level="5.3" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#hypothesis-explorer"><i class="fa fa-check"></i><b>5.3</b> Hypothesis Explorer</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#running-the-spp"><i class="fa fa-check"></i><b>5.3.1</b> Running the spp</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#downloading-annotations"><i class="fa fa-check"></i><b>5.4</b> Downloading annotations</a></li>
+<li class="chapter" data-level="5.5" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#viewing-the-annotations-search-and-subset-the-database"><i class="fa fa-check"></i><b>5.5</b> Viewing the annotations Search and subset the database</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#viewing-all-the-variables-in-the-database"><i class="fa fa-check"></i><b>5.5.1</b> Viewing all the variables in the database</a></li>
+<li class="chapter" data-level="5.5.2" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#subsetting-the-data"><i class="fa fa-check"></i><b>5.5.2</b> Subsetting the data</a></li>
+<li class="chapter" data-level="5.5.3" data-path="hypothes-is-1.html"><a href="hypothes-is-1.html#voting-feature"><i class="fa fa-check"></i><b>5.5.3</b> Voting feature</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="zotero-1.html"><a href="zotero-1.html"><i class="fa fa-check"></i><b>6</b> Zotero</a><ul>
 <li class="chapter" data-level="6.1" data-path="zotero-1.html"><a href="zotero-1.html#getting-started-1"><i class="fa fa-check"></i><b>6.1</b> Getting Started</a></li>
@@ -202,8 +211,50 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="hypothesisr-1" class="section level2">
 <h2><span class="header-section-number">5.2</span> hypothesisr</h2>
 <p><a href="https://github.com/mdlincoln/hypothesisr">hypothesisr</a> is an r package for scraping annotation data collected through the hypothesis app. All public annotations submitted through hypothesis to any website are publically available for download. As a result, the hypothesisr package can be used to download and process the annotations submitted to your website.</p>
-<p>As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository.</p>
+</div>
+<div id="hypothesis-explorer" class="section level2">
+<h2><span class="header-section-number">5.3</span> Hypothesis Explorer</h2>
+<p>As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository, <a href="https://github.com/CrumpLab/hypothesis_explorer" class="uri">https://github.com/CrumpLab/hypothesis_explorer</a></p>
+<div id="running-the-spp" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Running the spp</h3>
+<p>To run this app you need to have R and R-Studio installed on your computer. You will also need to have downloaded the Shiny and hypothesisr packages. You can run the app by either of the following methods</p>
+<ol style="list-style-type: decimal">
+<li><p>You can download the hypothesis_explorer repository as a .zip file, then open the server.r, or ui.r files in R-studio and click run-app</p></li>
+<li><p>You can have R-studio automatically download and the run app using by entering the following in the command line</p></li>
+</ol>
+<p><code>shiny::runGitHub('hypothesis_explorer', 'CrumpLab')</code></p>
+</div>
+</div>
+<div id="downloading-annotations" class="section level2">
+<h2><span class="header-section-number">5.4</span> Downloading annotations</h2>
+<p>The Hypothesis Explorer app currently implements two main functions: <strong>downloading</strong> and <strong>displaying/searching</strong> parts of the publicly avialable Hypothes.is annotation database.</p>
+<p><strong>Download the annotation database associated with a website</strong>: Type in the name of the website in the search bar. To see an example, enter “crumplab” into the website search and click the download button.</p>
+<p><strong>NOTE OF CAUTION</strong> We use the hypothesisr package to scrape parts of the entire Hypothes.is annotation database. As a result, there are some nuances in searching for particular websites that may cause you to accidentally download all of the annotations to a global domain rather than to a particular website.</p>
+<p>For example, I have two web-books published on my github domain, these are:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.crumplab.github.io/ResearchMethods" class="uri">https://www.crumplab.github.io/ResearchMethods</a></li>
+<li><a href="https://www.crumplab.github.io/programmingforpsych" class="uri">https://www.crumplab.github.io/programmingforpsych</a></li>
+</ol>
+<p>I am interested in using the Shiny app to look at only the annotations associated with these two websites. Using “crumplab” as the website will download all of the annotations associated with all subdomains on the site, so it will download annotations for both textbooks. On the other hand, including global domain information by searching “crumplab.github.io” will cause an attempt to download all annotations associated with the entire github domain, which will cause the Shiny app to crash.</p>
+</div>
+<div id="viewing-the-annotations-search-and-subset-the-database" class="section level2">
+<h2><span class="header-section-number">5.5</span> Viewing the annotations Search and subset the database</h2>
+<p>Hypothesis explorer should automatically download any annotations associated with the website that you entered. At the moment, we have only tested this for websites built with github pages.</p>
+<p>After the annotation database has been downloaded the two viewable tabs “Summary”, and “Data” will be autopopulated. The Summary tab gives an overview of the top annotated documents, pages, tags and users. The Data tab presents the entire database.</p>
+<div id="viewing-all-the-variables-in-the-database" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> Viewing all the variables in the database</h3>
+<p>The left-hand panel includes a “Variables (in Data View)” text box. Click into the box to see all of the names of each variable (column names) in the database. Clicking one of the variable names will add it to the list, and automatically display the content of that column in the database viewer. Likewise, deleting variable names will hide those columns from being displayed.</p>
+</div>
+<div id="subsetting-the-data" class="section level3">
+<h3><span class="header-section-number">5.5.2</span> Subsetting the data</h3>
+<p>For quickly collapsing aspects of the data by row information, we have four subsetting operations, for displaying only annotations associated with particular documents (e.g., entire books), pages (chapters within a book), tags (associated with each annotation), and users.</p>
+</div>
+<div id="voting-feature" class="section level3">
+<h3><span class="header-section-number">5.5.3</span> Voting feature</h3>
+<p>When a user submits an annotation, other users can post comments underneath the annotation. For example, if a student highlights a section of the textbook and comments that this section should be improved, another student could reply to the original comment. We have implemented a rudimentary comment voting system using these features of hypothes.is. For example, up/down style voting can be implemented by instructing users to vote by using the reply feature. Specifically, up votes can be registered by replying with a numeric value of 1, and down votes can be registered by replying with a numeric value of -1.</p>
+<p>Hypothesis Explorer automatically looks for any child posts that contain 1s or -1s, counts the total vote for each parent comment, and then displays the count in a column variable called “votes”.</p>
 
+</div>
 </div>
 </div>
             </section>

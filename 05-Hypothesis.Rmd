@@ -16,4 +16,57 @@ For example, in one assignment I had students annotate sections of the textbook 
 
 [hypothesisr](https://github.com/mdlincoln/hypothesisr) is an r package for scraping annotation data collected through the hypothesis app. All public annotations submitted through hypothesis to any website are publically available for download. As a result, the hypothesisr package can be used to download and process the annotations submitted to your website.
 
-As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository. 
+## Hypothesis Explorer
+As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository, [https://github.com/CrumpLab/hypothesis_explorer](https://github.com/CrumpLab/hypothesis_explorer)
+
+### Running the spp
+
+To run this app you need to have R and R-Studio installed on your computer. You will also need to have downloaded the Shiny and hypothesisr packages. You can run the app by either of the following methods
+
+1. You can download the hypothesis_explorer repository as a .zip file, then open the server.r, or ui.r files in R-studio and click run-app
+
+2. You can have R-studio automatically download and the run app using by entering the following in the command line
+
+  ```shiny::runGitHub('hypothesis_explorer', 'CrumpLab')```
+  
+## Downloading annotations
+
+The Hypothesis Explorer app currently implements two main functions: **downloading** and **displaying/searching** parts of the publicly avialable Hypothes.is annotation database.
+
+**Download the annotation database associated with a website**: Type in the name of the website in the search bar. To see an example, enter "crumplab" into the website search and click the download button. 
+
+**NOTE OF CAUTION** We use the hypothesisr package to scrape parts of the entire Hypothes.is annotation database. As a result, there are some nuances in searching for particular websites that may cause you to accidentally download all of the annotations to a global domain rather than to a particular website.
+
+For example, I have two web-books published on my github domain, these are:
+
+  1. https://www.crumplab.github.io/ResearchMethods
+  2. https://www.crumplab.github.io/programmingforpsych
+  
+I am interested in using the Shiny app to look at only the annotations associated with these two websites. Using "crumplab" as the website will download all of the annotations associated with all subdomains on the site, so it will download annotations for both textbooks. On the other hand, including global domain information by searching "crumplab.github.io" will cause an attempt to download all annotations associated with the entire github domain, which will cause the Shiny app to crash.
+
+## Viewing the annotations Search and subset the database
+
+Hypothesis explorer should automatically download any annotations associated with the website that you entered. At the moment, we have only tested this for websites built with github pages. 
+
+After the annotation database has been downloaded the two viewable tabs "Summary", and "Data" will be autopopulated. The Summary tab gives an overview of the top annotated documents, pages, tags and users. The Data tab presents the entire database.
+
+### Viewing all the variables in the database
+
+The left-hand panel includes a "Variables (in Data View)" text box. Click into the box to see all of the names of each variable (column names) in the database. Clicking one of the variable names will add it to the list, and automatically display the content of that column in the database viewer. Likewise, deleting variable names will hide those columns from being displayed.
+
+### Subsetting the data
+
+For quickly collapsing aspects of the data by row information, we have four subsetting operations, for displaying only annotations associated with particular documents (e.g., entire books), pages (chapters within a book), tags (associated with each annotation), and users.
+
+### Voting feature
+
+When a user submits an annotation, other users can post comments underneath the annotation. For example, if a student highlights a section of the textbook and comments that this section should be improved, another student could reply to the original comment. We have implemented a rudimentary comment voting system using these features of hypothes.is. For example, up/down style voting can be implemented by instructing users to vote by using the reply feature. Specifically, up votes can be registered by replying with a numeric value of 1, and down votes can be registered by replying with a numeric value of -1.
+
+Hypothesis Explorer automatically looks for any child posts that contain 1s or -1s, counts the total vote for each parent comment, and then displays the count in a column variable called "votes".
+
+
+
+
+
+
+
