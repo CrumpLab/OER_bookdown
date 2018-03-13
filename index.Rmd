@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: Crumpllab/OER_bookdown
+github-repo: CrumpLab/OER_bookdown
 description: "A tutorial and working resources for writing open-source textbooks using open-source tools"
 ---
 
