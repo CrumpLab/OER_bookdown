@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: Crumpllab/OER_bookdown
 description: "A tutorial and working resources for writing open-source textbooks using open-source tools"
 ---
 
@@ -16,7 +16,7 @@ description: "A tutorial and working resources for writing open-source textbooks
 
 This is a tutorial and set of working examples for creating web-based textbooks using a collection of open-source tools.
 
-This web-book is itself a working example. All of the source code needed to compile this book this book yourself is included in the github repository for this book. So, you could download the repository, and by following the instructions laid out across the chapters, replace this text with your own, and then compile your book as a web-page, .pdf or epub.
+This web-book is itself a working example. All of the source code needed to compile this book yourself is included in the [github repository for this book](https://github.com/CrumpLab/OER_bookdown). So, you could download the repository, and by following the instructions laid out across the chapters, replace this text with your own, and then compile your book as a web-page, .pdf or epub.
 
 
 

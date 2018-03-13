@@ -58,4 +58,87 @@ Each of the chapters in this tutorial will discuss each of these tools in more d
 
 [Zotero](https://www.zotero.org) is a free and open source citation management tool. It is cloud-based with both browser and app versions. It is easy to create .pdf libraries along with citation information, and then compile bibliographies with citation keys for quickly citing articles. The R bookdown package is compatible with latex-style bibliography files that can be exported by Zotero.
 
+## Quickstart
+
+If you want to skip to getting up and running, follow these steps. If they all work, then you should be able to copy the source code this book, compile it and display it as a webbook (or pdf or epub), and then start modifying the text content to create your own resources.
+
+### Download all the programs, and set-up needed accounts
+
+1. Download and install [R](https://www.r-project.org)
+2. Download and install [R-Studio](https://www.rstudio.com)
+3. Open R-studio, choose the packages tab, search for the package "bookdown", download and install
+4. Create an account with [Github](http://www.github.com)
+5. Download and install [Github Desktop]((https://desktop.github.com))
+
+### Create a Github repository 
+
+6. Create a new repository on the Github website, give it a name
+7. Clone the repository to your local computer using Github Desktop
+8. Open the local repository
+
+### Copy and compile this repository
+
+9. Download [this repository](https://github.com/CrumpLab/OER_bookdown) as a .zip file to your computer
+10. Copy the contents of the folder to your new local folder for your github repository
+11. In Github Desktop you should now see that there are many new changes to your repository. Commit the changes (uploads them to the online repository)
+12. Open the OERbookdown.Rproj in Rstudio, this is an R project file that will automatically point R to the files in this folder.
+13. In Rstudio, on the top right panel, choose the Build tab, then click build book.
+14. If everything goes smoothly, you will have compiled this book into a web-book, a .pdf and an epub. The compiled books are in the "docs" folder
+15. After the compilation process, a viewable web-book should be displayed on your computer.
+16. Upload any changes in your repository to Github using the commit button in Github Desktop.
+
+### Serve your book on the web using github pages
+
+In addition to providing free repositories, Github also allows files in the repositories to be served as web-pages. Set this up using the following steps:
+
+16. Log-in to your github account through a web browser
+17. Click on your repository
+18. You should see all of your files from your local computer in the online repository
+19. The html files to build the web-book are located in the docs folder. Github allows html files in a docs file to be rendered as a webpage
+20. Go to the settings page for your repository.
+21.Scroll down to the Github Pages options
+22. Turn on the option to use github pages with the docs folder
+23. Github should now display a url where you can view the web-book.
+
+### Make your own book
+
+Now that you have the workflow established, you can create your own book by editing the text content of the .Rmd files in this repository. Change the text, then build the book again, then upload it to Github, and you should have a new web-book.
+
+## Description of Files in this Repository
+
+ - OERbookdown.Rproj An R-studio project file that automatically points R-studio to all of the files in this folder.
+
+ - _bookdown.yml set a few options, like folder where book is compiled, currently "docs"
+ - _output.yml more configuration options
+ 
+Each .Rmd file is an Rmarkdown file containing the text for each chapter. The index.Rmd file contains some initilazation settings, and the preface content. All other .Rmd files contain the text for each chapter. These need to be edited to create new chapters. Add as many new chapters as you want by creating a new .Rmd file with an incremented number for the new chapter.
+
+ - index.Rmd Contains initialization settings, and preface content
+ - 01-Overview.Rmd Chapter 1 content
+ - 02-R.Rmd Chapter 2 content etc.
+ - 03-Bookdown.Rmd
+ - 04-Github.Rmd
+ - 05-Hypothesis.Rmd
+ - 06-Zotero.Rmd
+ - 07-references.Rmd
+
+Other files
+
+ - book.bib bibliography file
+ - DESCRIPTION miscellaneous
+ - docs : this is a folder containing the compiled book in html, .pdf and epub formats
+ - Figures : a folder to store figures that are imported into the book
+ - LICENSE  a license file
+ - packages.bib bibliography file
+ - preamble.tex supporting tex file for rendering
+ - README.md the README file displayed on Github
+ - style.css style file for webbook
+ - toc.css style file for webbook table of contents
+
+
+hypothesisR
+
+
+
+
 

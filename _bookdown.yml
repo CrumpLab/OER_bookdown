@@ -1,4 +1,4 @@
-book_filename: "bookdown-demo"
+book_filename: "OER_bookdown"
 output_dir: "docs"
 language:
   ui:

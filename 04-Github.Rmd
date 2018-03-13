@@ -16,7 +16,7 @@ Your account now consists of your profile page (where you can add information ab
 
 Github has provided a free and convenient tool for using your local computer to interface with the web-based version of Github. To use the tool, download and install the [desktop app for Github](https://desktop.github.com). Once the app is installed, make sure that you [connect it to your Github account](https://help.github.com/desktop/guides/getting-started-with-github-desktop/authenticating-to-github/) so that you can access repositories that you create.
 
-# Repository workflow
+## Repository workflow
 
 We will use the following workflow:
 
@@ -37,9 +37,20 @@ We will use the following workflow:
 ## Cloning a copy on your computer
 
   1. Open the Github desktop app
-  2. 
+  2. Login in to your Github account
+  3. Choose the clone repository option
+  4. Find the name of the repository you created on Github and select it. Github Desktop will now download the contents of the repository and save it locally (in the file folder of your choice) on your computer
   
 ## Make changes to the repository
+
+  1. If you are on a mac, choose "show in finder".
+  2. You can now edit any of the files locally
+  
+## Update the online github repository
+
+  1. Any time you change a file, git will track all of the changes that you make
+  2. To submit changes, choose the commit button
+  3. All of your changes will now be uploaded to the online repository.
 
 
 

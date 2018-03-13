@@ -163,11 +163,11 @@ This is a tutorial and set of working examples for creating web-based
 textbooks using a collection of open-source tools.
 
 This web-book is itself a working example. All of the source code needed
-to compile this book this book yourself is included in the github
-repository for this book. So, you could download the repository, and by
-following the instructions laid out across the chapters, replace this
-text with your own, and then compile your book as a web-page, .pdf or
-epub.
+to compile this book yourself is included in the
+\href{https://github.com/CrumpLab/OER_bookdown}{github repository for
+this book}. So, you could download the repository, and by following the
+instructions laid out across the chapters, replace this text with your
+own, and then compile your book as a web-page, .pdf or epub.
 
 \chapter{Overview}\label{overview}
 
@@ -323,6 +323,73 @@ It is easy to create .pdf libraries along with citation information, and
 then compile bibliographies with citation keys for quickly citing
 articles. The R bookdown package is compatible with latex-style
 bibliography files that can be exported by Zotero.
+
+\section{Quickstart}\label{quickstart}
+
+If you want to skip to getting up and running, follow these steps. If
+they all work, then you should be able to copy the source code this
+book, compile it and display it as a webbook (or pdf or epub), and then
+start modifying the text content to create your own resources.
+
+\subsection{Download all the programs, and set-up needed
+accounts}\label{download-all-the-programs-and-set-up-needed-accounts}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Download and install R
+\item
+  Download and install R-studio
+\item
+  Open R-studio, choose the packages tab, search for the package
+  ``bookdown'', download and install
+\item
+  Create an account with Github
+\item
+  Download and install Github Desktop
+\end{enumerate}
+
+\subsection{Create a Github
+repository}\label{create-a-github-repository}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Create a new repository on the Github website, give it a name
+\item
+  Clone the repository to your local computer using Github Desktop
+\item
+  Open the local repository
+\end{enumerate}
+
+\subsection{Copy and compile this
+repository}\label{copy-and-compile-this-repository}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Download this repository as a .zip file to your computer
+\item
+  Copy the contents of the folder to your new local folder for your
+  github repository
+\item
+  In Github Desktop you should now see that there are many new changes
+  to your repository. Commit the changes (uploads them to the online
+  repository)
+\item
+  Open the OERbookdown.Rproj in Rstudio, this is an R project file that
+  will automatically point R to the files in this folder.
+\item
+  In Rstudio, on the top right panel, choose the Build tab, then click
+  build book.
+\item
+  If everything goes smoothly, you will have compiled this book
+\end{enumerate}
 
 \chapter{R, R-studio, and RMarkdown}\label{r-r-studio-and-rmarkdown}
 
@@ -576,17 +643,93 @@ computer}\label{cloning-a-copy-on-your-computer}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Open the Github desktop app
 \item
+  Login in to your Github account
+\item
+  Choose the clone repository option
+\item
+  Find the name of the repository you created on Github and select it.
+  Github Desktop will now download the contents of the repository and
+  save it locally (in the file folder of your choice) on your computer
 \end{enumerate}
 
 \section{Make changes to the
 repository}\label{make-changes-to-the-repository}
 
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If you are on a mac, choose ``show in finder''.
+\item
+  You can now edit any of the files locally
+\end{enumerate}
+
+\section{Update the online github
+repository}\label{update-the-online-github-repository}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Any time you change a file, git will track all of the changes that you
+  make
+\item
+  To submit changes, choose the commit button
+\item
+  All of your changes will now be uploaded to the online repository.
+\end{enumerate}
+
 \chapter{Hypothes.is}\label{hypothes.is-1}
 
-We have finished a nice book.
+\href{https://web.hypothes.is}{Hypothes.is} is a web-browser add-on for
+annotating the web via inline commenting. This allows anyone to select a
+snippet of text in a web-browser and then post a comment about the
+selected text. Annotations can be made publicly or privately. All public
+annotations can be viewed by anyone else running hypothesis on the same
+website. Using Hypothesis with your web-book allows you to engage
+students in interacting with the textbook by allowing them to contribute
+to content generation (by posting new content), or content revision (by
+tagging sections in need of revision).
+
+If you publish your bookdown book as a webpage, then you anyone with
+Hypothes.is can use it to annotate the textbook.
+
+\section{A case study example}\label{a-case-study-example}
+
+I recently compiled a
+\href{http://crumplab.github.io/ResearchMethods/}{Research Methods in
+Psychology textbook} using the tools described in this tutorial. The
+landing page describes how Hypothes.is can be used in conjunction with
+the textbook.
+
+In class I assigned students the task of downloading Hypothes.is,
+creating a Hypothes.is account, and then throughout the course gave them
+various assignments where they were responsible for annotating parts of
+the textbook.
+
+For example, in one assignment I had students annotate sections of the
+textbook that were in need of improvement. This allows students to
+participate in content revision as they read the textbook. Other
+assignments could include focused online discussion about textbook
+content using annotations, or using annotations as a way for students to
+add content to the textbook.
+
+\section{hypothesisr}\label{hypothesisr-1}
+
+\href{https://github.com/mdlincoln/hypothesisr}{hypothesisr} is an r
+package for scraping annotation data collected through the hypothesis
+app. All public annotations submitted through hypothesis to any website
+are publically available for download. As a result, the hypothesisr
+package can be used to download and process the annotations submitted to
+your website.
+
+As a part of this project, we have created a Shiny app that conveniently
+displays and manipulates hypothesis annotation databases in a website.
+The Shiny app is located in this github repository.
 
 \chapter{Zotero}\label{zotero-1}
 

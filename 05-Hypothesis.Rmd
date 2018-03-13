@@ -1,3 +1,19 @@
 # Hypothes.is
 
-We have finished a nice book.
+[Hypothes.is](https://web.hypothes.is) is a web-browser add-on for annotating the web via inline commenting. This allows anyone to select a snippet of text in a web-browser and then post a comment about the selected text. Annotations can be made publicly or privately. All public annotations can be viewed by anyone else running hypothesis on the same website. Using Hypothesis with your web-book allows you to engage students in interacting with the textbook by allowing them to contribute to content generation (by posting new content), or content revision (by tagging sections in need of revision).
+
+If you publish your bookdown book as a webpage, then you anyone with Hypothes.is can use it to annotate the textbook.
+
+## A case study example
+
+I recently compiled a [Research Methods in Psychology textbook](http://crumplab.github.io/ResearchMethods/) using the tools described in this tutorial. The landing page describes how Hypothes.is can be used in conjunction with the textbook.
+
+In class I assigned students the task of downloading Hypothes.is, creating a Hypothes.is account, and then throughout the course gave them various assignments where they were responsible for annotating parts of the textbook.
+
+For example, in one assignment I had students annotate sections of the textbook that were in need of improvement. This allows students to participate in content revision as they read the textbook. Other assignments could include focused online discussion about textbook content using annotations, or using annotations as a way for students to add content to the textbook.
+
+## hypothesisr
+
+[hypothesisr](https://github.com/mdlincoln/hypothesisr) is an r package for scraping annotation data collected through the hypothesis app. All public annotations submitted through hypothesis to any website are publically available for download. As a result, the hypothesisr package can be used to download and process the annotations submitted to your website.
+
+As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository. 
