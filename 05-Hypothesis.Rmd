@@ -19,7 +19,11 @@ For example, in one assignment I had students annotate sections of the textbook 
 ## Hypothesis Explorer
 As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository, [https://github.com/CrumpLab/hypothesis_explorer](https://github.com/CrumpLab/hypothesis_explorer)
 
-### Running the spp
+### Web-based version
+
+A web-based version of the app can be accessed here: [https://hypothesis-explorer.herokuapp.com](https://hypothesis-explorer.herokuapp.com). Note the website currently times out after 55 seconds of inactivity. Reload the page to restart the app. This web-version is currently in beta testing.
+
+### Running the app locally
 
 To run this app you need to have R and R-Studio installed on your computer. You will also need to have downloaded the Shiny and hypothesisr packages. You can run the app by either of the following methods
 
