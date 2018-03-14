@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="hypothes-is-1.html">
-<link rel="next" href="shiny.html">
+<link rel="prev" href="zotero-1.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -202,78 +202,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="zotero-1" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Zotero</h1>
-<p><a href="https://www.zotero.org">Zotero</a> is a free, cross-platform tool to help you collect, organize, cite, and share your research sources. Zotero is similar to Mendeley or EndNote.</p>
-<p>The purpose of this chapter is to show how Zotero can be used as a reference manager to allow you to cite works in your book, and automatically compile bibliographies or reference sections. The bookdown package uses Latex bibliography files to generate citations and create bibliographies. These .bib files are text-based files with a specific syntax for coding the relevant information in a citation. Each citation in a .bib file has an associated key that is inserted into an Rmarkdown document to generate a citation. We will use Zotero to avoid writing our own .bib from scratch. Instead, there are convenient methods for populating Zotero with a database of references, and for compiling a .bib file from a Zotero databse that can be used in bookdown.</p>
-<div id="getting-started-1" class="section level2">
-<h2><span class="header-section-number">6.1</span> Getting Started</h2>
-<ol style="list-style-type: decimal">
-<li>Create an account with <a href="https://www.zotero.org">Zotero</a>, click register in the top-right corner</li>
-<li><a href="https://www.zotero.org/download/">Download</a> the Zotero Desktop app</li>
-<li><a href="https://www.zotero.org/download/">Download</a> the Zotero Connector extension for your web-browser</li>
-</ol>
-<p>Zotero operates on the cloud as well as on your desktop. You can connect your online Zotero account with your desktop app in the preferences.</p>
+<div id="shiny" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Shiny</h1>
+<p><a href="https://shiny.rstudio.com">Shiny</a> is an R package for creating a web site to interact with R. For example, a website could include various widgets for user input. User input data gets sent to a server running R, which then executes R code. Output from R can be sent back to the webpage in the form of data tables and graphs. A working example using the default shiny app available in R-studio is presented below. Note the shiny app will only display in the web-book version of this tutorial, and not the .pdf or epub versions.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">include_app</span>(<span class="st">&quot;https://shiny-crump-test.herokuapp.com&quot;</span>, 
+  <span class="dt">height =</span> <span class="st">&quot;600px&quot;</span>)</code></pre></div>
+<iframe src="https://shiny-crump-test.herokuapp.com?showcase=0" width="672" height="600px">
+</iframe>
+<p>In the above example, the shiny app has loaded a dataset into R and plotted a histogram. The sidepanel contains a scrollbar that allows a user to change the bin-size of the histogram. When the scrollbar is moved the new bin-size settings are sent to the server, R recomputes the histogram, and the website dynamically shows a histogram with new bin-sizes.</p>
+<p>This example shiny app is running as a standalone website, but it has been embedded inside the web-book <a href="https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html">see the example from bookdown for more info</a></p>
+<div id="sharing-shiny-apps" class="section level2">
+<h2><span class="header-section-number">7.1</span> Sharing Shiny Apps</h2>
+<p>Shiny apps come with a few caveats, including learning how to program in R, learning how to program reactive expressions in Shiny (<a href="https://shiny.rstudio.com/tutorial/">lots of good tips here</a>, and <a href="https://shiny.rstudio.com/articles/">here</a>), and then figuring out how to host the Shiny app over the web.</p>
+<p>Shiny apps can be shared without a web server. For example, the shiny app in this repository <a href="https://github.com/CrumpLab/experimentsimulator_ttest" class="uri">https://github.com/CrumpLab/experimentsimulator_ttest</a> can be downloaded and run directly in R-studio. However, in this case, the shiny app is run locally and can not be embedded in a web-book.</p>
+<p>Shiny offers free and paid services for <a href="https://www.shinyapps.io">hosting Shiny apps on their servers</a>. If you deploy a Shiny app using this method, then simply place the url for your shiny app into the embedding code (see the raw .Rmd file for this chapter see to how the above shiny app was embedded into this page). It is also possible to run your own Shiny server, or to use other free or paid cloud-computing services to run Shiny apps.</p>
 </div>
-<div id="populating-zotero-with-references" class="section level2">
-<h2><span class="header-section-number">6.2</span> Populating Zotero with references</h2>
-<p>There are multiple ways to import references into Zotero. In the Zotero desktop app you can create folders to organize your references.</p>
-<div id="drag-and-drop-.pdfs" class="section level3">
-<h3><span class="header-section-number">6.2.1</span> Drag and Drop .pdfs</h3>
-<ol style="list-style-type: decimal">
-<li>Create a new folder and name it</li>
-<li>Drag and drop .pdfs into the folder</li>
-<li>Highlight the .pdfs, then right-click, and choose “retrieve metadata for pdf”.</li>
-<li>For most journal articles, Zotero will be able to automatically find the citation information for your .pdf. This will convert the .pdf into a Zotero citation that includes both the citation information, as well as the .pdf</li>
-</ol>
-</div>
-<div id="import-citations-and-pdfs-from-the-web" class="section level3">
-<h3><span class="header-section-number">6.2.2</span> Import citations and pdfs from the web</h3>
-<ol style="list-style-type: decimal">
-<li>Ensure that your Desktop app is open, and that you have installed the Zotero plugin for your web-browser</li>
-<li>Use google scholar to search for an article</li>
-<li>Click the Zotero button in your web-browser</li>
-<li>You should see a list of all of the articles on the google scholar page.</li>
-<li>Click any or all the articles you want to import, then import them</li>
-<li>Zotero will download the citation information along with any associated .pdf to the current folder that is open in the Zotero desktop app.</li>
-</ol>
-<p>Zotero is fairly flexible, so the above process will generally work when you are accessing many different databases, and journal web-pages for specific articles.</p>
-</div>
-<div id="a-note-of-caution" class="section level3">
-<h3><span class="header-section-number">6.2.3</span> A note of caution</h3>
-<p>The citation information that Zotero downloads is sometimes inaccurate. Be sure to check the fields for each of your citations to ensure they are accurate. For example, page ranges are often missing.</p>
-</div>
-</div>
-<div id="generating-a-.bib-file" class="section level2">
-<h2><span class="header-section-number">6.3</span> Generating a .bib file</h2>
-<ol style="list-style-type: decimal">
-<li>Right-click a Zotero folder</li>
-<li>Choose “Export Collection”</li>
-<li>Choose “Bibtex”</li>
-<li>Save the file</li>
-<li>Copy the file into the folder for your bookdown project</li>
-<li>add the file to the bibliography line in the Index.Rmd file.</li>
-</ol>
-</div>
-<div id="citing-references-in-an-rmarkdown-file" class="section level2">
-<h2><span class="header-section-number">6.4</span> Citing references in an RMarkdown file</h2>
-<p>Citations are add using the following format <code>@citationkey</code>, or <code>[@citationkey]</code> to place the author,year citation in parentheses. The citation key name is listed for each citation in the bib file. Here are a couple of links with some additional examples: <a href="https://bookdown.org/yihui/bookdown/citations.html">examples from bookdown</a>, and examples from <a href="http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">RMarkdown</a>.</p>
-<p>The source code for this book contains two .bib files: book.bib and packages.bib. Each citation in those files has an associated citation key. Here is an example of citing the bookdown package <span class="citation">(Xie <a href="#ref-xie2015">2015</a>)</span>. This is an example of citing R-core team <span class="citation">(R Core Team <a href="#ref-R-base">2016</a>)</span></p>
-<div id="cite-while-you-write" class="section level3">
-<h3><span class="header-section-number">6.4.1</span> Cite while you write</h3>
-<p>A minor inconvenience when using .bib for citations in Rmarkdown is that you have to know the citation key, and these are easy to forget. One option is to load up your .bib file, then search through it to find the citation key.</p>
-<p>Another option is to download and install the <code>citr</code> package. Once this package is installed, you can use its cite while your write feature. Click the tools menu, addins, then, insert citations. This will open up a window showing all of the citations in your bib files. You can click multiple citations, and then insert the citation keys into your Rmarkdown document. This is convenient method for quickly finding needed citation keys. I recommend first openining the index.rmd file (which points to your .bib files), and then opening the insert citations tools; this will allow the tool to find your .bib files. After this point, you should be able to use the tool when you are working within .Rmd files for each chapter.</p>
+<div id="a-minimal-working-example-using-heroku" class="section level2">
+<h2><span class="header-section-number">7.2</span> A minimal working example using Heroku</h2>
+<p><a href="https://www.heroku.com">Heroku</a> is a flexible and free (with paid options) cloud-computing service that can be used to serve Shiny apps.</p>
+<p>This repository shows an example of configuring Heroku to run an R shiny app: <a href="https://github.com/CrumpLab/testShinyHeroku" class="uri">https://github.com/CrumpLab/testShinyHeroku</a></p>
 
-</div>
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-xie2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
-</div>
-<div id="ref-R-base">
-<p>R Core Team. 2016. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
 </div>
 </div>
             </section>
@@ -281,8 +229,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="hypothes-is-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="zotero-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -311,7 +259,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-Zotero.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-Shiny.Rmd",
 "text": "Edit"
 },
 "download": ["OER_bookdown.pdf", "OER_bookdown.epub"],

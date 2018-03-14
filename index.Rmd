@@ -18,6 +18,7 @@ This is a tutorial and set of working examples for creating web-based textbooks 
 
 This web-book is itself a working example. All of the source code needed to compile this book yourself is included in the [github repository for this book](https://github.com/CrumpLab/OER_bookdown). So, you could download the repository, and by following the instructions laid out across the chapters, replace this text with your own, and then compile your book as a web-page, .pdf or epub.
 
+Feel free to contribute to this tutorial by submitting pull requests to this repository.
 
 
 

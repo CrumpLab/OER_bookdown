@@ -1,0 +1,31 @@
+# Shiny
+
+[Shiny](https://shiny.rstudio.com) is an R package for creating a web site to interact with R. For example, a website could include various widgets for user input. User input data gets sent to a server running R, which then executes R code. Output from R can be sent back to the webpage in the form of data tables and graphs. A working example using the default shiny app available in R-studio is presented below. Note the shiny app will only display in the web-book version of this tutorial, and not the .pdf or epub versions.
+
+```{r}
+knitr::include_app("https://shiny-crump-test.herokuapp.com", 
+  height = "600px")
+
+```
+
+In the above example, the shiny app has loaded a dataset into R and plotted a histogram. The sidepanel contains a scrollbar that allows a user to change the bin-size of the histogram. When the scrollbar is moved the new bin-size settings are sent to the server, R recomputes the histogram, and the website dynamically shows a histogram with new bin-sizes.
+
+This example shiny app is running as a standalone website, but it has been embedded inside the web-book [see the example from bookdown for more info](https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html)
+
+## Sharing Shiny Apps
+
+Shiny apps come with a few caveats, including learning how to program in R, learning how to program reactive expressions in Shiny ([lots of good tips here](https://shiny.rstudio.com/tutorial/), and [here](https://shiny.rstudio.com/articles/)), and then figuring out how to host the Shiny app over the web.
+
+Shiny apps can be shared without a web server. For example, the shiny app in this repository [https://github.com/CrumpLab/experimentsimulator_ttest](https://github.com/CrumpLab/experimentsimulator_ttest) can be downloaded and run directly in R-studio. However, in this case, the shiny app is run locally and can not be embedded in a web-book.
+
+Shiny offers free and paid services for [hosting Shiny apps on their servers](https://www.shinyapps.io). If you deploy a Shiny app using this method, then simply place the url for your shiny app into the embedding code (see the raw .Rmd file for this chapter see to how the above shiny app was embedded into this page). It is also possible to run your own Shiny server, or to use other free or paid cloud-computing services to run Shiny apps. 
+
+## A minimal working example using Heroku
+
+[Heroku](https://www.heroku.com) is a flexible and free (with paid options) cloud-computing service that can be used to serve Shiny apps.
+
+This repository shows an example of configuring Heroku to run an R shiny app: [https://github.com/CrumpLab/testShinyHeroku](https://github.com/CrumpLab/testShinyHeroku)
+
+
+
+
