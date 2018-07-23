@@ -35,6 +35,8 @@ See the chapter on Zotero.
 
 ### Links for using R Markdown
 
+Everything you ever wanted to know about R Markdown is here, in the recent [Definitive Guide to R Markdown](https://bookdown.org/yihui/rmarkdown/)
+
 1. The R-studio website has in-depth tutorials on using R Markdown, available [here](http://rmarkdown.rstudio.com/lesson-1.html).
 2. [Cheatsheet for R Markdown](http://rmarkdown.rstudio.com/lesson-15.html)
 3. In the Help menu of R-Studio, you can also find cheetsheats and formatting guides for using R Markdown.
