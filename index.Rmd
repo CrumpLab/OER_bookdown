@@ -3,7 +3,10 @@ title: "Open tools for writing open interactive textbooks (and more)"
 author: "Matthew Crump"
 date: "2018: Last compiled `r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: 
+  bookdown::gitbook:
+    includes:
+      in_header: includeme.html
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
