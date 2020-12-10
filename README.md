@@ -1,4 +1,4 @@
-Crump, Matthew J. C. (2018). Open tools for writing open interactive textbooks (and more). https://crumplab.github.io/programmingforpsych/
+Crump, Matthew J. C. (2018). Open tools for writing open interactive textbooks (and more). https://crumplab.github.io/OER_bookdown/
 
 This is a tutorial and set of working examples for creating web-based textbooks using a collection of open-source tools.
 
